@@ -1,0 +1,85 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "GameApp",
+            "request": "launch",
+            "mainClass": "GameApp",
+            "projectName": "java_wrksp_dacc3ea3"
+        },
+        {
+            "type": "java",
+            "name": "Launch with Arguments Prompt",
+            "request": "launch",
+            "mainClass": "${file}",
+            "args": [
+                "${input:player1}",
+                "${input:player2}",
+                "${input:random}",
+                "${input:customDeck}",
+                "${input:GUI}"
+            ]
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "GameConsole",
+            "request": "launch",
+            "mainClass": "GameConsole",
+            "projectName": "java_wrksp_dacc3ea3"
+        }
+    ],
+    "inputs": [
+        {
+            "type": "promptString",
+            "id": "player1",
+            "description": "Player 1's name",
+            "default": "Jack"
+        },
+        {
+            "type": "promptString",
+            "id": "player2",
+            "description": "Player 2's name",
+            "default": "Jill"
+        },
+        {
+            "type": "pickString",
+            "id": "random",
+            "description": "Random Deck Dealing",
+            "options": [
+                "random",
+                ""
+            ],
+            "default": "random"
+        },
+        {
+            "type": "pickString",
+            "id": "customDeck",
+            "description": "Custom Deck",
+            "options": [
+                "customDeck",
+                ""
+            ],
+            "default": "customDeck"
+        },
+        {
+            "type": "pickString",
+            "id": "GUI",
+            "description": "Enable Custom GUI",
+            "options": [
+                "GUI",
+                ""
+            ],
+            "default": "GUI"
+        }
+    ]
+}
