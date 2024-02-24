@@ -3,13 +3,14 @@
 
 	@author Enrique Gabriel Badiola
 	@since 23 February 2024
-    @version 1.1
+    @version 1.2
 
 	I have not used Java language code obtained from another student, 
 	or any other unauthorized source, either modified or unmodified.
 **/
 
 import java.io.*;
+import java.net.ConnectException;
 import java.net.URI;
 import java.net.http.*;
 import java.nio.charset.StandardCharsets;
@@ -63,6 +64,11 @@ public class CSCI22_Tools extends JFrame {
                 } catch (IOException e) {
                     System.err.println("Error updating file: " + e.getMessage());
                 }
+            })
+            .exceptionally(e -> {
+                if (e.getCause() instanceof ConnectException) 
+                    System.err.println("Error: No internet connection. Skipping update.");
+                return null;
             })
             .join();
     }
