@@ -3,7 +3,7 @@
 
 	@author Enrique Gabriel Badiola
 	@since 23 February 2024
-    @version 1.0
+    @version 1.1
 
 	I have not used Java language code obtained from another student, 
 	or any other unauthorized source, either modified or unmodified.
@@ -25,8 +25,6 @@ import javax.swing.JFrame;
  */
 public class CSCI22_Tools extends JFrame {
     
-    private JFrame f;
-
     /**
      * The `public CSCI22_Tools()` constructor in the `CSCI22_Tools` class checks
      * for objects when instantiated.
@@ -96,7 +94,7 @@ public class CSCI22_Tools extends JFrame {
             }
         });
     }
-    
+
     public void coordsToTitle(JFrame f, int adjustForX, int adjustForY) {
         f.addMouseListener(new MouseAdapter() {
             
